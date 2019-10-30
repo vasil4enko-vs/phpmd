@@ -64,7 +64,7 @@ script:
   - |
     if [[ $BUILD_PHAR = 'true' ]]; then
       git submodule update --init && ant package -D-phar:filename=./phpmd.phar && ./phpmd.phar --version;
-      gpg -u kylekatarnls@gmail.com --detach-sign --output ./phpmd.phar.asc ./phpmd.phar
+      gpg -u pgp@phpmd.org --detach-sign --output ./phpmd.phar.asc ./phpmd.phar
     fi
 
 notifications:
